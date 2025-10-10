@@ -45,16 +45,39 @@ This is a comprehensive digital wallet application inspired by PayTM, featuring 
 
 ## 🏗️ Architecture
 
-### **High-Level Design**
+### **System Architecture**
+
+![Architecture Diagram](https://github.com/abhii08/end-to-end-wallet/assets/your-assets/architecture-diagram.png)
+
+The system consists of multiple interconnected components:
+
+#### **Core Applications**
+- **Next.js App (User)** - User-facing wallet application
+- **Next.js App (Merchant)** - Merchant dashboard and payment processing
+- **Bank Webhook Handler** - Processes incoming bank notifications (Node.js/CloudFlare)
+
+#### **External Integrations**
+- **Bank APIs** - HDFC, SBI, Axis Bank integrations
+- **Database** - PostgreSQL for data persistence
+- **Scrapers** - User withdrawal and bank transaction scrapers
+
+#### **Data Flow**
+1. Users interact with the Next.js user application
+2. Merchants process payments through the merchant application
+3. Bank webhooks notify the system of transaction updates
+4. All applications connect to the central PostgreSQL database
+5. External bank APIs handle actual money transfers
+6. Scrapers monitor and sync transaction statuses
 
 ```mermaid
 graph TB
-    A[User App] --> B[Next.js API Routes]
-    C[Bank Webhook Server] --> D[Database]
-    B --> E[NextAuth]
-    B --> D[PostgreSQL + Prisma]
-    F[External Banks] --> C
-    A --> G[Recoil Store]
+    A[Next.js User App] --> B[PostgreSQL DB]
+    C[Next.js Merchant App] --> B
+    D[Bank Webhook Handler] --> B
+    E[Bank APIs - HDFC/SBI/Axis] --> D
+    F[User Withdrawal Scraper] --> A
+    G[Bank Scraper] --> D
+    B --> H[Transaction Processing]
 ```
 
 ### **Tech Stack**

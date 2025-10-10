@@ -20,6 +20,8 @@
 
 This is a comprehensive digital wallet application inspired by PayTM, featuring secure user authentication, seamless money transfers, and bank integration. Built with a modern monorepo architecture using Turborepo for optimal development experience.
 
+![Architecture Diagram](./assets/architecture-diagram.png)
+
 ## ✨ Features
 
 ### 🔐 **Authentication & Security**
@@ -46,8 +48,6 @@ This is a comprehensive digital wallet application inspired by PayTM, featuring 
 ## 🏗️ Architecture
 
 ### **System Architecture**
-
-![Architecture Diagram](https://github.com/abhii08/end-to-end-wallet/assets/your-assets/architecture-diagram.png)
 
 The system consists of multiple interconnected components:
 

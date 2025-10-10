@@ -20,6 +20,11 @@
 
 This is a comprehensive digital wallet application inspired by PayTM, featuring secure user authentication, seamless money transfers, and bank integration. Built with a modern monorepo architecture using Turborepo for optimal development experience.
 
+## 🏗️ Architecture
+
+### **System Architecture**
+
+The system consists of multiple interconnected components:
 ![Architecture Diagram](./assets/architecture.png)
 
 ## ✨ Features
@@ -44,12 +49,6 @@ This is a comprehensive digital wallet application inspired by PayTM, featuring 
 - **Responsive Design** - Mobile-first approach
 - **Real-time Updates** - Live transaction status
 - **Intuitive Dashboard** - Clean and modern interface
-
-## 🏗️ Architecture
-
-### **System Architecture**
-
-The system consists of multiple interconnected components:
 
 #### **Core Applications**
 - **Next.js App (User)** - User-facing wallet application

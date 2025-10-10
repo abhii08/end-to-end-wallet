@@ -20,7 +20,7 @@
 
 This is a comprehensive digital wallet application inspired by PayTM, featuring secure user authentication, seamless money transfers, and bank integration. Built with a modern monorepo architecture using Turborepo for optimal development experience.
 
-![Architecture Diagram](./assets/architecture-diagram.png)
+![Architecture Diagram](./assets/architecture.png)
 
 ## ✨ Features
 
